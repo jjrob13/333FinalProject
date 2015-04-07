@@ -1,0 +1,36 @@
+#inputs
+net "CLK" loc = "B8"; #link clock
+
+#map to each separate display
+net "AX(3)" loc = "F12";
+net "AX(2)" loc = "J12";
+net "AX(1)" loc = "M13";
+net "AX(0)" loc = "K14";
+
+#map seven segment display
+net "SSEG(6)" loc = "L14";
+net "SSEG(5)" loc = "H12";
+net "SSEG(4)" loc = "N14";
+net "SSEG(3)" loc = "N11";
+net "SSEG(2)" loc = "P12";
+net "SSEG(1)" loc = "L13";
+net "SSEG(0)" loc = "M12";
+
+
+#active displays
+net "Active_Displays(3)" loc = "N3";
+net "Active_Displays(2)" loc = "E2";
+net "Active_Displays(1)" loc = "F3";
+net "Active_Displays(0)" loc = "G3";
+
+net "Hex_Disp0(3)" loc = "B4";
+net "Hex_Disp0(2)" loc = "K3";
+net "Hex_Disp0(1)" loc = "L3";
+net "Hex_Disp0(0)" loc = "P11";
+
+
+net "Hex_Disp2(3)" loc = "A7";
+net "Hex_Disp2(2)" loc = "M4";
+net "Hex_Disp2(1)" loc = "C11";
+net "Hex_Disp2(0)" loc = "G12";
+
