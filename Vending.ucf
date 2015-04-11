@@ -1,0 +1,38 @@
+#inputs
+net "CLK" loc = "B8"; #link clock
+
+#map to each separate display
+net "AX(3)" loc = "F12";
+net "AX(2)" loc = "J12";
+net "AX(1)" loc = "M13";
+net "AX(0)" loc = "K14";
+
+#map seven segment display
+net "SSEG(6)" loc = "L14";
+net "SSEG(5)" loc = "H12";
+net "SSEG(4)" loc = "N14";
+net "SSEG(3)" loc = "N11";
+net "SSEG(2)" loc = "P12";
+net "SSEG(1)" loc = "L13";
+net "SSEG(0)" loc = "M12";
+
+
+
+## The data input will be controlled with switches
+
+NET "SEL(0)"			LOC = "P11" ;					# SW<0>
+NET "SEL(1)"			LOC = "L3" ;					# SW<1>
+NET "SEL(2)"			LOC = "K3" ;					# SW<2>
+NET "SEL(3)"			LOC = "B4" ;					# SW<2>
+
+NET "coin_ret"	LOC = "A7";
+NET "BTN_CLK"	LOC = "G12";
+NET "RES"		LOC = "N3";
+net "stats_switch" loc = "f3";
+net "restock_switch" loc = "e2";
+## Outputs are routed to the LED's
+
+NET "LED(0)"			LOC = "M5" ;					# LED<0>
+NET "LED(1)"			LOC = "M11" ;					# LED<1>
+NET "LED(2)"			LOC = "P7" ;					# LED<2>
+NET "LED(3)"			LOC = "P6" ;					# LED<3>
