@@ -36,3 +36,9 @@ NET "LED(0)"			LOC = "M5" ;					# LED<0>
 NET "LED(1)"			LOC = "M11" ;					# LED<1>
 NET "LED(2)"			LOC = "P7" ;					# LED<2>
 NET "LED(3)"			LOC = "P6" ;					# LED<3>
+
+
+NET "STATE_LED(3)" 	LOC = "G1";
+NET "STATE_LED(2)" 	LOC = "P4";
+NET "STATE_LED(1)" 	LOC = "N4";
+NET "STATE_LED(0)" 	LOC = "N5";
