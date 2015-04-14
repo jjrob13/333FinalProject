@@ -7,6 +7,7 @@ entity Vending is port(
 	BTN_CLK, RES, CLK, coin_ret, restock_switch, stats_switch: in std_logic;
 	SEL : in std_logic_vector(3 downto 0);
 	LED : out std_logic_vector(3 downto 0);
+	STATE_LED : out std_logic_vector(3 downto 0);
 	AX : out std_logic_vector(3 downto 0);
 	SSEG : out std_logic_vector(6 downto 0));
 end entity;
@@ -480,4 +481,19 @@ change_maker : process(money_in, cm_en)
 			end if;
 		end if;
 end process change_maker;
+
+
+--updates state led
+state_led_upd : process(curr_state)
+	begin
+		case curr_state is
+			when start => STATE_LED <= x"1";
+			when buy => STATE_LED <= x"2";
+			when change => STATE_LED <= x"3";
+			when restock => STATE_LED <= x"4";
+			when stats => STATE_LED <= x"5";
+			when others => null;
+		
+		end case;
+end process state_led_upd;
 end architecture;
